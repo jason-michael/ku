@@ -1,0 +1,27 @@
+{
+  "name": "jm-hangman",
+  "version": "1.1.0",
+  "description": "Command-line word guess game using node.js and javascript constructor functions.",
+  "main": "hangman.js",
+  "bin": {
+    "hangman": "hangman.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jason-michael/node-hangman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jason-michael/node-hangman/issues"
+  },
+  "homepage": "https://github.com/jason-michael/node-hangman#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "inquirer": "^6.2.0"
+  }
+}

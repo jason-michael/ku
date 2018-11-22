@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman | Supercars</title>
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'
+        crossorigin='anonymous'>
+    <!-- FontAwesome -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css' integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ'
+        crossorigin='anonymous'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="override">
+    <div class="container mt-3">
+
+        <!-- Game jumbotron -->
+        <div id="game-jumbotron" class="jumbotron pb-2 pt-4 mb-2">
+            <div class="container">
+                <!-- Title row -->
+                <div class="row">
+                    <div class="col text-center">
+                        <p id="title-text" class="display-3 mb-0">Supercar Hangman</p>
+                        <p id="description-text" class="lead text-center mb-0">(Makes and models of various supercars)</p>
+                    </div>
+                </div>
+
+                <hr class="my-2">
+
+                <!-- Instructions text -->
+                <p id="instructions-text" class="text-center">
+                    <span class="startAccent"> > </span>
+                    Press any letter to guess the word below
+                    <span class="startAccent"> < </span>
+                </p>
+
+                <!-- Hidden word ("_ _ _ _") -->
+                <h1 id="hiddenWord-text" class="display-3 text-center">Fluid jumbo</h1>
+
+                <!-- Wrong guesses / guesses left row -->
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <p class="lead text-center ml-3 d-inline">Wrong guesses:</p>
+                        <p id="lettersGuessed-text" class="lead ml-2 d-inline"></p>
+                    </div>
+                    <div class="col-6 text-right">
+                        <p class="lead text-center d-inline">Guesses left:</p>
+                        <p id="guessesLeft-text" class="lead mr-4 d-inline"></p>
+                    </div>
+                </div>
+
+                <hr class="my-2">
+
+                <!-- Wins / losses / last word row -->
+                <div class="row mt-3 text-center">
+                    <div class="col-3">
+                        <p class="lead ml-3 d-inline">Wins:</p>
+                        <p id="wins-text" class="lead ml-2 d-inline"></p>
+                    </div>
+                    <div class="col-3">
+                        <p class="lead ml-3 d-inline">Losses:</p>
+                        <p id="losses-text" class="lead ml-2 d-inline"></p>
+                    </div>
+                    <div class="col-6">
+                        <p class="lead ml-3 d-inline">Last word:</p>
+                        <p id="lastWord-text" class="lead ml-2 d-inline" style="text-transform:capitalize;"></p>
+                    </div>
+                </div>
+            </div> <!-- container -->
+        </div> <!-- Game jumbtron -->
+
+        <!-- Car info card -->
+        <div id="car-info" class="jumbotron pt-5 mt-0">
+
+            <!-- Container -->
+            <div class="container mt-0" >
+    
+                <!-- Car image / info -->
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 col-sm-12">
+                        <img id="carImage" src="assets/images/cars/diablo.jpg" alt="image">
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-sm-12">
+                        <div class="card" id="info-card">
+                            <div class="card-body">
+                                <!-- Car Make | Model -->
+                                <div class="card-title">
+                                    <div class="row m-0">
+                                        <p id="carMake-text"></p>
+                                        <p class="ml-2 mr-2" style="color: red;">|</p>
+                                        <p id="carModel-text"></p>
+                                    </div>
+                                </div>
+                                <!-- Year -->
+                                <div class="row p-1">
+                                    <div class="col-6 text-left">
+                                        <p class="card-text">Year:</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p id="carYear-text" class="card-text"></p>
+                                    </div>
+                                </div>
+                                <!-- MSRP -->
+                                <div class="row p-1">
+                                    <div class="col-6 text-left">
+                                        <p class="card-text">MSRP:</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p id="carMsrp-text" class="card-text"></p>
+                                    </div>
+                                </div>
+                                <!-- Engine -->
+                                <div class="row p-1">
+                                    <div class="col-6 text-left">
+                                        <p class="card-text">Engine:</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p id="carEngine-text" class="card-text"></p>
+                                    </div>
+                                </div>
+                                <!-- Horsepower -->
+                                <div class="row p-1">
+                                    <div class="col-6 text-left">
+                                        <p class="card-text">Horsepower:</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p id="carHorsepower-text" class="card-text"></p>
+                                    </div>
+                                </div>
+                                <!-- Torque -->
+                                <div class="row p-1">
+                                    <div class="col-6 text-left">
+                                        <p class="card-text">Torque:</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p id="carTorque-text" class="card-text"></p>
+                                    </div>
+                                </div>
+                                <!-- TopSpeed -->
+                                <div class="row p-1">
+                                    <div class="col-6 text-left">
+                                        <p class="card-text">Top speed:</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p id="carTopSpeed-text" class="card-text"></p>
+                                    </div>
+                                </div>
+                                <!-- ZeroToSixty -->
+                                <div class="row p-1">
+                                    <div class="col-6 text-left">
+                                        <p class="card-text">0-60 mph:</p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p id="carZeroToSixty-text" class="card-text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- car image/info row-->
+            </div>
+        </div><!-- car info card -->
+
+    </div><!-- container-fluid -->
+
+    <!-- Bootstrap -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo'
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
+        crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy'
+        crossorigin='anonymous'></script>
+    <!-- game.js -->
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>

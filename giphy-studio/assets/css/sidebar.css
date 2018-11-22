@@ -1,0 +1,258 @@
+#sidebar {
+    grid-area: sidebar;
+    max-height: 100vh;
+    padding: 0px 8px;
+    border: 2px solid;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-color: blueviolet;
+    color: #999;
+    background: #25232b;
+    transition: border-color 1s;
+}
+
+/*==============================
+    Menu (mobile-only)
+==============================*/
+#sidebar .menu {
+    display: none;
+}
+
+#sidebar .menu:hover {
+    cursor: pointer;
+}
+
+/*==============================
+    Brand
+==============================*/
+#sidebar .brand {
+    padding: 20px;
+    font-size: 42px;
+    text-align: center;
+}
+
+/*==============================
+    Search bar
+==============================*/
+#sidebar .search-area {
+    position: relative;
+}
+
+/* Text input */
+#search-bar {
+    width: 100%;
+    padding: 9px 40px 9px 15px;
+    border: 1px solid #999;
+    border-radius: 30px;
+    background: transparent;
+    color: #999;
+    font-size: 1em;
+    outline: none;
+    transition: background .2s;
+}
+
+#search-bar:focus {
+    background: #999;
+    color: #25232b;
+}
+
+/* Search button */
+#search-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border: none;
+    background: #25232b;
+    color: #999;
+    outline: none;
+    transition: .25s;
+}
+
+#search-button:hover {
+    color: #25232b;
+    background: #999;
+    cursor: pointer;
+}
+
+/*================================
+   Sidebar buttons
+=================================*/
+.btn {
+    position: relative;
+    width: 100%;
+    padding: 12px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 40px;
+    background: transparent;
+    color: #999;
+    font-family: 'Montserrat';
+    font-size: 1em;
+    text-align: left;
+    outline: none;
+    transition: .25s;
+}
+
+.btn i {
+    float: right;
+}
+
+.btn:hover {
+    background: #999;
+    color: #25232b;
+    cursor: pointer;
+}
+
+/* Content buttons - icon colors */
+#content-buttons-list button:nth-child(1) i {
+    color: #9f55e4;
+}
+
+#content-buttons-list button:nth-child(2) i {
+    color: #ff0000;
+}
+
+#content-buttons-list button:nth-child(3) i {
+    color: #4169e1;
+}
+
+#content-buttons-list button:nth-child(4) i {
+    color: #228b22;
+}
+
+.content-btn span {
+    position: absolute;
+    right: 15%;
+}
+
+.content-btn[data-content="gallery"] span {
+
+    color: #9f55e4;
+}
+
+.content-btn[data-content="favorites"] span {
+    color: #ff0000;
+}
+
+.content-btn[data-content="random"] span {
+    color: #4169e1;
+}
+
+.content-btn[data-content="trending"] span {
+    color: #228b22;
+}
+
+/* Button active state */
+.active {
+    background: #33313b;
+}
+
+/*==============================
+    User buttons list filters
+==============================*/
+#user-topics-filters {
+    margin: 0 0 4px 0;
+    color: #666;
+    text-align: right;
+}
+
+#user-topics-filters .filter-btn:hover {
+    cursor: pointer;
+}
+
+#user-topics-filters .filter-btn:nth-child(1):hover {
+    color: #fff;
+}
+
+#user-topics-filters .filter-btn:nth-child(2):hover {
+    color: #0077ff;
+}
+
+#user-topics-filters .filter-btn:nth-child(3):hover {
+    color: red;
+}
+
+.filter-btn {
+    padding: 4px;
+    border: none;
+    background: transparent;
+    color: #999;
+    outline: none;
+    transition: color .25s;
+}
+
+
+/*================================
+    User buttons list
+=================================*/
+#user-topics-list {
+    position: relative;
+    height: calc(100vh - 432px);
+    padding-right: 12px;
+    overflow-y: auto;
+}
+
+/* Scrollbar */
+#user-topics-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#user-topics-list::-webkit-scrollbar-track {
+    border-radius: 12px;
+    background: rgba(137, 43, 226, 0.281);
+}
+
+#user-topics-list::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: blueviolet;
+}
+
+/*================================
+    User button
+=================================*/
+.user-btn {
+    text-transform: capitalize;
+}
+
+.user-btn:hover i {
+    color: #25232b;
+    visibility: visible;
+}
+
+.user-btn i {
+    visibility: hidden;
+}
+
+.user-btn i:hover {
+    color: red;
+}
+
+/*==============================
+    Sidebar Footer
+==============================*/
+#sidebar-footer {
+    margin: 4px 0 0 0;
+}
+
+#sidebar-footer p {
+    display: inline;
+    color: rgb(167, 105, 224);
+}
+
+/*==============================
+    Animations
+==============================*/
+.flash {
+    animation: flash .5s ease-in-out 1;
+}
+
+@keyframes flash {
+    0% {
+        background: rgba(137, 43, 226, 0.521);
+    }
+}

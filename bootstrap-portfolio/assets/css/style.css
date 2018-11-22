@@ -1,0 +1,234 @@
+/* #bso * = bootstrap-override */
+
+/* GLOBAL */
+body {
+    background-image: url(../img/pattern.png);
+    animation: sideload 250ms ease-in-out 1, fadeIn 500ms ease-in-out 1;
+}
+
+h1, h2, h3, #bso .navbar-brand {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 1.75em;
+}
+
+p, #bso .nav-link {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    min-height: calc(100vh - 70px);
+}
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
+    padding: 0;
+}
+
+.disabled {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+
+#bso .navbar-brand {
+    background: #4aaaa5;
+    color: #fff;
+    height: 100%;
+    padding: 14px;
+    transition: background 500ms;
+}
+
+#bso .navbar-brand:hover {
+    background: #5ddad3;
+}
+
+#bso .nav-link {
+    line-height: 14px;
+    border-left: 1px solid #efefef;
+}
+
+#bso .nav-link:first-child {
+    border-left: none;
+}
+
+#bso .nav-link:hover {
+    color: #fff;
+    background: #4aaaa5;
+    transition: 500ms;
+}
+
+#bso .active {
+    color: #4aaaa5;
+    font-weight: 600;
+}
+
+.content-box {
+    background: #fff;
+    border: 2px solid #ddd;
+    margin: 50px 0;
+    padding: 26px;
+}
+
+.content-box h1 {
+    color: #4aaaa5;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+
+footer {
+    display: table;
+    background: #666;
+    color: #fff;
+    height: 70px;
+    width: 100%;
+    border-top: 6px solid #4aaaa5;
+    text-align: center;
+}
+
+footer p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* INDEX.HTML */
+.about-box img {
+    width: 340px;
+    float: left;
+    margin: 6px 14px 0 0;
+    border: 2px solid #ccc;
+}
+
+.about-box p {
+    color: #777;
+    font-size: 1.25em;
+    line-height: 1.4;
+}
+
+/* PORTFOLIO.HTML */
+.box {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    padding: 0px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 12px #4aaaa5;
+}
+
+.box img {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 280px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box p {
+    background: #4aaaa5;
+    color: #fff;
+    z-index: 2;
+    position: absolute;
+    top: calc(100% - 80px);
+    left: 0;
+    right: 0;
+    margin: 0;
+    height: 70px;
+    width: 100%;
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 2.8;
+}
+
+/* CONTACT.HTML */
+.contact-box {
+    color: #777;
+}
+
+.contact-box label {
+    margin: 20px 0 2px 0;
+}
+
+.contact-box button {
+    background: #4aaaa5;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.25em;
+    border: none;
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+    transition: 500ms;
+}
+
+.contact-box button:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #777;
+    box-shadow: 0px 0px 12px #4aaaa5;
+    border-radius: 4px;
+}
+
+/* MEDIA QUERY - USED ONLY TO OVERRIDE THE STYLE OF THE NAVBAR FOR SM SCREENS */
+@media screen and (max-width: 768px) {
+    .navbar {
+        background-color: #4aaaa5;
+        padding: 0 20px;
+    }
+
+    #bso .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    #bso .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    #bso .active {
+        color: #fff;
+    }
+
+    #bso .nav-link {
+        border-left: none;
+        font-size: 1.5em;
+        margin: 8px 0 8px 20px;
+    }
+
+    #bso .nav-link:hover {
+        color: #fff;
+    }
+
+    #bso .container {
+        max-width: 95%;
+        min-width: 95%;
+        padding: 0;
+        margin: auto;
+    }
+    .about-box img {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
+
+/* BONUS: INCORPORATE CSS ANIMATIONS IN YOU PORTFOLIO  */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes sideload {
+    0% {
+        opacity: 0;
+
+        transform: translateX(-100%);
+    }
+}

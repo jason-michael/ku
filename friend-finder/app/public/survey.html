@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Friend Finder | Survey</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Favicon / Bulma / FontAwesome / Local CSS-->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <h1><i class="fas fa-users"></i> Friend Finder</h1>
+                </a>
+                <!-- Hamburger menu -->
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-nav">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- Nav -->
+            <div class="navbar-end">
+                <div id="navbar-nav" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a href="/" class="navbar-item">Home</a>
+                        <a href="/api/friends" target="_blank" class="navbar-item">API</a>
+                        <a href="https://github.com/jason-michael/friend-finder" target="_blank" class="navbar-item">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <!-- Main -->
+    <main class="container" style="flex:1;">
+
+        <form id="survey-form">
+            <p class="subtitle">Step 1: Enter your name and a link to your photo.</p>
+            <div class="columns">
+                <!-- Image -->
+                <div class="column is-one-quarter has-text-centered">
+                    <img id="user-image" src="https://mbtskoudsalg.com/images/avatar-icon-png-3.png" alt="">
+                </div>
+
+                <!-- Name/Image inputs -->
+                <div class="column is-three-quarters">
+                    <!-- Name input -->
+                    <div class="field">
+                        <p class="control is-expanded has-icons-left">
+                            <input id="name-input" class="input" type="text" placeholder="Your name">
+                            <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+                        </p>
+                    </div>
+                    <!-- Image input -->
+                    <div class="field has-addons">
+                        <p class="control is-expanded has-icons-left">
+                            <input id="image-input" class="input" type="url" placeholder="http://placehold.it/100x100">
+                            <span class="icon is-small is-left"><i class="fas fa-image"></i></span>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary" onclick="getRandomImage()">
+                                <i class="fas fa-dice-six"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="subtitle">Step 2: Read the statements and select your corresponding emotion.</p>
+            <hr>
+
+            <!-- Questions are dynamically inserted into #questions -->
+            <div id="questions"></div>
+            <br>
+
+            <!-- Progress bar -->
+            <div id="progress-bar"></div>
+
+            <!-- Submit button -->
+            <div class="field is-grouped is-grouped-right">
+                <div class="control">
+                    <button id="submit-survey" type="submit" class="button is-primary is-outlined" disabled>Submit</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <br>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <a href="/">Home</a> |
+                <a href="/api/friends">API Friends</a> |
+                <a href="https://github.com/jason-michael/friend-finder" target="_blank">Source</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Matched Friend Modal -->
+    <div id="match-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <p class="title" style="color:#fff;">You matched with...</p>
+            <p class="image">
+                <img id="match-image" src="" alt="match-image">
+                <p id="match-name" class="title" style="color:#fff;"></p>
+            </p>
+        </div>
+        <button class="modal-close is-large" aria-label="close" onclick="toggleMatchModal()"></button>
+    </div>
+
+    <!-- Javascript -->
+    <script src="assets/js/survey.js"></script>
+    <script>
+        //--------------------------------------
+        // BULMA HAMBURGER MENU
+        // From Bulma documentation
+        //--------------------------------------
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "This full-stack site will take in results from your users' surveys, then compare their answers with those from other users.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "dependencies": {
+    "bulma": "^0.7.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jason-michael/friend-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jason-michael/friend-finder/issues"
+  },
+  "homepage": "https://github.com/jason-michael/friend-finder#readme"
+}

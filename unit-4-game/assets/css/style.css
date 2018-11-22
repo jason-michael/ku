@@ -1,0 +1,90 @@
+/* Global */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Locust';
+    background-size: cover;
+    background-image: url('../img/bg2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container-fluid {
+    max-width: 1000px;
+}
+
+.vertical-center {
+    display: flex;
+    min-height: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header {
+    color: #ccc;
+    background: #222;
+}
+
+.ptext {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+/* Modal */
+.modal-content {
+    color: #ccc;
+    background: #222;
+}
+.modal-header {
+    border-bottom: none;
+}
+.modal-footer {
+    border-top: none;
+}
+
+/* Team card */
+.team-card {
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .75);
+}
+.team-card-body {
+    background: #333;
+}
+.team-card-body.team-flex {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Character card */
+.character-card {
+    border: none;
+    max-width: 150px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.432);
+}
+.character-card .card-body {
+    color: #ccc;
+    background: #222;
+}
+
+.select {
+    transition: box-shadow .5s;
+}
+.select.locust:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(212, 5, 5, 1);
+}
+.select.cog:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px #05abd4;
+}
+
+@font-face {
+    font-family: Locust;
+    src: url('../fonts/CGF\ Locust\ Resistance.ttf')
+}

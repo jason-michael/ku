@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Friend Finder | Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Favicon / Bulma / FontAwesome / Local CSS-->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <h1><i class="fas fa-users"></i> Friend Finder</h1>
+                </a>
+                <!-- Hamburger menu -->
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-nav">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- Nav -->
+            <div class="navbar-end">
+                <div id="navbar-nav" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a href="/survey" class="navbar-item">Survey</a>
+                        <a href="/api/friends" target="_blank" class="navbar-item">API</a>
+                        <a href="https://github.com/jason-michael/friend-finder" target="_blank" class="navbar-item">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero is-primary is-bold has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Friend Finder</h1>
+                <h2 class="subtitle">Find friends like you.</h2>
+                <a id="cta" href="/survey" class="button is-primary is-large is-inverted is-outlined">Take the Survey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <main class="container" style="flex:1;">
+        <br><br><br>
+        <div class="columns cards is-centered">
+            <!-- Card 1 -->
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title">“They've done studies. 60% of the time, it works every time.”</p>
+                        <p class="subtitle">Brian Fantana</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title">“It sorta does what Limp Bizkit did to music in the late ’90s.”</p>
+                        <p class="subtitle">Ryan Reynolds</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <p class="title">“Friend Finder freed me from my glass case of emotion.”</p>
+                        <p class="subtitle">Ron Burgundy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                <a href="/survey">Survey</a> |
+                <a href="/api/friends">API Friends</a> |
+                <a href="https://github.com/jason-michael/friend-finder" target="_blank">Source</a>
+            </p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        //--------------------------------------
+        // BULMA HAMBURGER MENU
+        // From Bulma documentation
+        //--------------------------------------
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

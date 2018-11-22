@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+
+body {
+    font-family: 'Roboto';
+}
+
+#game-state-text {
+    color: #ccc;
+}
+
+#game-state-text span:nth-child(1) {
+    color: firebrick;
+}
+
+#game-state-text span:nth-child(2) {
+    color: royalblue;
+}
+
+#game-state-text span:nth-child(3) {
+    color: green;
+}
+
+#player1-card {
+    border: 1px solid royalblue;
+}
+
+#player2-card {
+    border: 1px solid firebrick;
+}
+
+#results-card {
+    border: 1px solid #111;
+}
+
+#reset-firebase {
+    font-size: .8em;
+    padding: 4px;
+    text-transform: uppercase;
+}
+
+.btn {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    outline: none;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn[data-player="1"]:hover {
+    background: #007bff;
+    color: #fff;
+    border-color: transparent;
+}
+
+.btn[data-player="2"]:hover {
+    background: #dc3545;
+    color: #fff;
+    border-color: transparent;
+}
+
+.card {
+    margin: 4px;
+    border-radius: 0;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    border-radius: 0;
+}
+
+.card-header:first-child {
+    border-radius: 0;
+}
+
+.container-fluid {
+    max-width: 412px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.round-winner {
+    border: 1px solid green;
+    border-radius: 0;
+}

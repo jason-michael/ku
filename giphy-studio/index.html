@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giphy Studio</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/play-icon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/play-icon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css' 
+    integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ'
+    crossorigin='anonymous'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.js' 
+    integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60='
+    crossorigin='anonymous'>
+
+    </script>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+
+        <!-- Brand -->
+        <div class="brand fancy">GIPHY Studio</div>
+
+        <!-- Menu button (mobile-only) -->
+        <div class="menu"><i class="fas fa-bars fa-2x"></i></div>
+
+        <div class="sidebar-content">
+
+            <!-- Search bar / search button-->
+            <div class="search-area">
+                <input id="search-bar" type="text" placeholder="Search giphy...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+
+            <br>
+
+            <!-- Content buttons -->
+            <ul id="content-buttons-list">
+
+                <!-- Gallery -->
+                <button class="btn content-btn active" data-content="gallery">Gallery
+                    <span>0</span>
+                    <i class="far fa-images"></i>
+                </button>
+
+                <!-- Favorites -->
+                <button class="btn content-btn" data-content="favorites">Favorites
+                    <span>0</span>
+                    <i class="far fa-heart"></i>
+                </button>
+
+                <!-- Random -->
+                <button class="btn content-btn" data-content="random" data-offset="0">Random
+                    <span>0</span>
+                    <i class="fas fa-random"></i>
+                </button>
+
+                <!-- Trending -->
+                <button class="btn content-btn" data-content="trending" data-offset="0">Trending
+                    <span>0</span>
+                    <i class="fas fa-chart-line"></i>
+                </button>
+
+            </ul> <!-- ./content buttons -->
+
+            <hr>
+
+            <!-- User topic filters -->
+            <div id="user-topics-filters">
+                <button id="user-topics-sort" class="filter-btn"><i class="fa fa-sort-alpha-down"></i></button>
+                <button id="user-topics-trash" class="filter-btn"><i class="fa fa-trash"></i></button>
+            </div>
+
+            <!-- User topic buttons -->
+            <ul id="user-topics-list"></ul>
+
+            <!-- Sidebar footer -->
+            <div id="sidebar-footer">
+                <p id="user-buttons-count-text">0</p>
+                <p>items</p>
+            </div>
+
+        </div> <!-- ./sidebar-content -->
+
+    </aside>
+
+    <!-- Content header -->
+    <header>
+        <h2 id="header-text" class="fancy">Gallery</h2>
+    </header>
+
+    <!-- Content pages -->
+    <main>
+        <section id="gallery" class="main-content"></section>
+        <section id="favorites" class="main-content"></section>
+        <section id="random" class="main-content"></section>
+        <section id="trending" class="main-content"></section>
+    </main>
+
+    <!-- javascript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
