@@ -1,8 +1,8 @@
 # Trivia Game
 
-![trivia](/assets/img/trivia.png?raw=true)
+![trivia](https://user-images.githubusercontent.com/30272940/49699877-75863600-fb9c-11e8-9d10-333020b02902.png)
 
-[Github page](https://jason-michael.github.io/TriviaGame/)
+[Github page](https://jason-michael.github.io/ku/trivia-game/)
 
 Simple trivia game using JS timeouts/intervals and [OpenTrivia DB](https://opentdb.com/).
 
