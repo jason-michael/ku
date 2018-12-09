@@ -1,6 +1,6 @@
 # RPS - Multiplayer
 
-![rps](/rps.png?raw=true)
+![rps](https://user-images.githubusercontent.com/30272940/49699835-ccd7d680-fb9b-11e8-8252-c09ef498a990.png)
 
 #### [Github page](https://jason-michael.github.io/RPS-Multiplayer/)
 
